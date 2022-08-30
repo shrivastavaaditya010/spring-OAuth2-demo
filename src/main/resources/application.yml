@@ -1,0 +1,14 @@
+#Single Sign-on and Oauth2 Configuration
+
+security:
+  oauth2:
+    client:
+      client-id: # your application client id
+      client-secret: #your application client secret
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form
+      token-name: oauth_token
+      authentication-scheme: query
+    resource:
+      user-info-uri: https://api.github.com/user
